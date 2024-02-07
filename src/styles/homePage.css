@@ -1,0 +1,158 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+  html {
+      height: 100%;
+      /* Garante que o HTML ocupe 100% da altura da viewport */
+  }
+
+  body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      min-height: 100vh;
+  }
+
+  .backgroundContainer {
+      min-width: 320px;
+      max-width: 800px;
+      flex: 1;
+      /* Faz com que a backgroundContainer ocupe o espaço restante verticalmente */
+  }
+
+  .overallContainer {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-areas:
+          "topo"
+          "conteudoPrincipal"
+          "rodape";
+      grid-template-rows: 100px minmax(0, 1fr) auto;
+
+  }
+
+  header {
+      grid-area: topo;
+      display: flex;
+  }
+
+  .mainContainer {
+      grid-area: conteudoPrincipal;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .textInputArea {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .textInputArea ::placeholder {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+  }
+
+  textarea {
+      resize: none;
+      border: none;
+  }
+
+  textarea::placeholder {
+      font-size: 30px;
+      color: #0A3871;
+  }
+
+  textarea:focus::placeholder {
+      color: transparent;
+  }
+
+  .warningTextArea {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+  }
+
+  .actionBtns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+  }
+
+  .actionBtns button {
+      width: 343px;
+      height: 67px;
+      border-radius: 24px;
+      font-size: 1.5em;
+  }
+
+  .cryptBtn {
+      background-color: #0A3871;
+      color: #ffffff;
+  }
+
+  .uncryptBtn {
+      background-color: #ffffff;
+      color: darkblue;
+  }
+
+  .magicArea {
+      display: flex;
+      text-align: center;
+  }
+
+
+  .encryptedArea,
+  .uncryptedArea {
+      display: none;
+  }
+
+  .emptyFieldMessage {
+      padding: 32px;
+      margin: 64px 24px 40px 24px;
+      width: 327px;
+      height: 186px;
+      border-radius: 32px;
+      box-shadow: 0 15px 15px 30px rgba(128, 128, 128, 0.3);
+  }
+
+  .emptyFieldMessage h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+  }
+
+  .emptyFieldMessage p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+  }
+
+  @keyframes pulsarAviso {
+
+      0% {
+          transform: scale(1);
+      }
+
+      50% {
+          transform: scale(0.9);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  }
+
+  .pulsarAviso {
+      animation: pulsarAviso 4s infinite;
+  }
+
+  footer {
+      grid-area: rodape;
+      text-align: center;
+      color: #fff;
+      width: 100%;
+      margin-top: 2.8em;
+      position: fixed;
+      bottom: 0;
+      background-color: #0A3871;
+  }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/styles/homePage.css">
+
+    <title>Criptografador</title>
+</head>
+
+<body>
+    <div class="backgroundContainer">
+        <div class="overallContainer">
+            <header>
+                <img src="./src/images/alura-logo-A.png" alt="logo da alura com a letra 'a' em minúsculo">
+            </header>
+            <div class="mainContainer">
+                <div class="textInputArea">
+                    <div class="textBox">
+                        <textarea name="textToTransform" class="texto" placeholder="Digite seu texto" rows="20"
+                            cols="50"></textarea>
+                    </div>
+                    <div class="actionBtns">
+                        <button class="cryptBtn" onclick="EncryptArea()">
+                            Criptografar
+                        </button>
+                        <button class="uncryptBtn" onclick="UncryptArea()">
+                            Descriptografar
+                        </button>
+                    </div>
+                </div>
+                <div class="magicArea">
+                    <div class="emptyFieldMessage">
+                        <h3>Nenhuma mensagem encontrada</h3>
+                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>
+                    <div class="encryptedArea">
+                        <textarea name="encryptedText" class="EncryptedText" cols="20" rows="10"></textarea>
+                    </div>
+
+                    <div class="uncryptedArea">
+                        <textarea name="uncryptedText" class="UncryptedText" cols="20" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                &copy; Feito com &hearts; por Guilherme Tomesz Flores
+            </footer>
+        </div>
+    </div>
+    <script src="./src/javascript/decodificador.js"></script>
+</body>
+
+</html>
