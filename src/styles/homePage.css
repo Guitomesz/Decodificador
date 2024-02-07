@@ -108,7 +108,9 @@
 
   .encryptedArea,
   .uncryptedArea,
-  .copyBtns {
+  .copyBtns,
+  .copyBtnUncrypt,
+  .copyBtnEncrypt {
       display: none;
   }
 
