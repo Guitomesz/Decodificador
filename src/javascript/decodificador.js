@@ -20,6 +20,7 @@ function EncryptArea() {
         showEncryptedArea.style.display = 'block';
         showUncryptedArea.style.display = 'none';
         showCopyBtnEncrypt.style.display = 'block';
+        showCopyBtnUncrypt.style.display = 'none';
 
     } else {
         emptyFieldMessage.style.display = 'block';
@@ -35,6 +36,7 @@ function UncryptArea() {
         showEncryptedArea.style.display = 'none';
         showUncryptedArea.style.display = 'block';
         showCopyBtnUncrypt.style.display = 'block';
+        showCopyBtnEncrypt.style.display = 'none';
     } else {
         emptyFieldMessage.style.display = 'block';
         emptyFieldWarning(emptyFieldMessage);
