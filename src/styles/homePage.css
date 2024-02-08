@@ -56,9 +56,10 @@
   textarea {
       resize: none;
       border: none;
-      font-family: 'Inter', sans-serif !important;
-      font-weight: 400 !important;
-      font-size: 24px !important;
+      width: 343px 48px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
   }
 
   textarea::placeholder {
@@ -69,6 +70,11 @@
   textarea:focus::placeholder {
       color: transparent;
   }
+
+  /* 
+  .ruleText {
+      text-align: left;
+  } */
 
   .warningTextArea {
       display: flex;
@@ -120,7 +126,7 @@
       width: 327px;
       height: 186px;
       border-radius: 32px;
-      box-shadow: 0 15px 15px 30px rgba(128, 128, 128, 0.3);
+      box-shadow: 0 10px 10px 25px rgba(128, 128, 128, 0.4);
   }
 
   .emptyFieldMessage h3 {
@@ -161,4 +167,36 @@
       position: fixed;
       bottom: 0;
       background-color: #0A3871;
+  }
+
+
+
+
+  /* Media queries para tablets */
+  @media screen and (min-width: 830px) {
+      .cryUncry {
+          display: flex;
+          flex-direction: row;
+
+      }
+
+      .emptyFieldMessage {
+          width: 688px;
+          height: 133px;
+          margin: 64px 40px 40px 40px;
+      }
+
+      .actionBtns button {
+          width: 332px;
+          height: 67px;
+      }
+
+      .copyBtn {
+          width: 100%;
+      }
+
+      textarea {
+          width: 688px;
+          height: 288px;
+      }
   }

@@ -19,11 +19,14 @@
             <div class="mainContainer">
                 <div class="textInputArea">
                     <div class="textBox">
-                        <textarea name="textToTransform" class="texto" placeholder="Digite seu texto" cols="30"
+                        <textarea name="textToTransform" class="texto" placeholder="Digite seu texto" cols="25"
                             rows="10"></textarea>
-
+                        <div class="ruleText">
+                            <img src="./src/images/bi_exclamation-circle-fill.png">&nbsp; Apenas letras minúsculas e sem
+                            acento.
+                        </div>
                     </div>
-                    <div class="actionBtns">
+                    <div class="actionBtns cryUncry">
                         <button class="cryptBtn" onclick="EncryptArea()">
                             Criptografar
                         </button>
@@ -38,21 +41,21 @@
                         <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                     </div>
                     <div class="encryptedArea">
-                        <textarea name="encryptedText" class="EncryptedText" cols="30" rows="10"></textarea>
+                        <textarea name="encryptedText" class="EncryptedText" cols="25" rows="10"></textarea>
                     </div>
 
                     <div class="uncryptedArea">
-                        <textarea name="uncryptedText" class="UncryptedText" cols="30" rows="10"></textarea>
+                        <textarea name="uncryptedText" class="UncryptedText" cols="25" rows="10"></textarea>
                     </div>
+                    <div class="actionBtns">
+                        <button class="copyBtnEncrypt copyBtn" onclick="writeToClipboardEncrypt()">
+                            Copiar
+                        </button>
 
-                    <button class="copyBtnEncrypt copyBtns" onclick="writeToClipboardEncrypt()">
-                        Copiar
-                    </button>
-
-                    <button class="copyBtnUncrypt copyBtns" onclick="writeToClipboardUncrypt()">
-                        Copiar
-                    </button>
-
+                        <button class="copyBtnUncrypt copyBtn" onclick="writeToClipboardUncrypt()">
+                            Copiar
+                        </button>
+                    </div>
                 </div>
             </div>
             <footer>
