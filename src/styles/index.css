@@ -42,6 +42,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: darkgray;
   }
 
   .textInputArea {
@@ -107,6 +108,11 @@
   .uncryptBtn {
       background-color: var(--color-lightgray);
       color: var(--color-darkblue);
+  }
+
+  .copyBtn {
+      background-color: #ffffff;
+      color: darkblue;
   }
 
   .magicArea {
