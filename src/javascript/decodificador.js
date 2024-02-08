@@ -12,7 +12,6 @@ var originalText = '';
 function EncryptArea() {
     var texto = textToTransform.value.trim();
     if (texto !== '') {
-        // Armazenar o texto original
         originalText = texto;
 
         EncryptText();
@@ -23,7 +22,6 @@ function EncryptArea() {
         showCopyBtnUncrypt.style.display = 'none';
 
     } else {
-        emptyFieldMessage.style.display = 'block';
         emptyFieldWarning(emptyFieldMessage);
     }
 }
@@ -38,7 +36,6 @@ function UncryptArea() {
         showCopyBtnUncrypt.style.display = 'block';
         showCopyBtnEncrypt.style.display = 'none';
     } else {
-        emptyFieldMessage.style.display = 'block';
         emptyFieldWarning(emptyFieldMessage);
     }
 }

@@ -1,32 +1,33 @@
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-  html {
-      height: 100%;
-      /* Garante que o HTML ocupe 100% da altura da viewport */
+  * {
+      box-sizing: border-box;
+  }
+
+  :root {
+      --color-lightgray: #F3F5FC;
+      --color-darkblue: #0A3871;
+      --color-lightblue: #D8DFE8;
   }
 
   body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       min-height: 100vh;
   }
 
   .backgroundContainer {
       min-width: 320px;
       max-width: 800px;
-      flex: 1;
-      /* Faz com que a backgroundContainer ocupe o espaço restante verticalmente */
   }
 
   .overallContainer {
-      box-sizing: border-box;
       display: grid;
       grid-template-areas:
           "topo"
           "conteudoPrincipal"
           "rodape";
-      grid-template-rows: 100px minmax(0, 1fr) auto;
+      grid-template-rows: auto minmax(0, 1fr) auto;
 
   }
 
@@ -56,7 +57,6 @@
   textarea {
       resize: none;
       border: none;
-      width: 343px 48px;
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 24px;
@@ -64,22 +64,17 @@
 
   textarea::placeholder {
       font-size: 30px;
-      color: #0A3871;
+      color: var(--color-darkblue)
   }
 
   textarea:focus::placeholder {
       color: transparent;
   }
 
-  /* 
   .ruleText {
-      text-align: left;
-  } */
-
-  .warningTextArea {
-      display: flex;
-      flex-direction: row;
-      gap: 0;
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 20px;
   }
 
   .actionBtns {
@@ -96,14 +91,22 @@
       font-size: 1.5em;
   }
 
+  .cryUncry {
+      margin-bottom: 24px;
+  }
+
+  .copyBtn {
+      margin: 20px 0 40px 0;
+  }
+
   .cryptBtn {
-      background-color: #0A3871;
-      color: #ffffff;
+      background-color: var(--color-darkblue);
+      color: var(--color-lightgray);
   }
 
   .uncryptBtn {
-      background-color: #ffffff;
-      color: darkblue;
+      background-color: var(--color-lightgray);
+      color: var(--color-darkblue);
   }
 
   .magicArea {
@@ -155,48 +158,95 @@
   }
 
   .pulsarAviso {
-      animation: pulsarAviso 4s infinite;
+      animation: pulsarAviso 2s infinite;
   }
 
   footer {
       grid-area: rodape;
       text-align: center;
-      color: #fff;
+      color: var(--color-lightblue);
       width: 100%;
       margin-top: 2.8em;
       position: fixed;
       bottom: 0;
-      background-color: #0A3871;
+      background-color: var(--color-darkblue)
   }
 
 
 
 
-  /* Media queries para tablets */
-  @media screen and (min-width: 830px) {
-      .cryUncry {
-          display: flex;
-          flex-direction: row;
+  @media screen and (min-width: 768px) {
 
-      }
-
-      .emptyFieldMessage {
-          width: 688px;
-          height: 133px;
-          margin: 64px 40px 40px 40px;
-      }
-
-      .actionBtns button {
-          width: 332px;
-          height: 67px;
-      }
-
-      .copyBtn {
-          width: 100%;
+      .backgroundContainer {
+          min-width: 100%;
       }
 
       textarea {
-          width: 688px;
-          height: 288px;
+          width: 700px;
+          height: 400px;
       }
+
+      .actionBtns {
+          flex-direction: row;
+          justify-content: center;
+      }
+
+      .emptyFieldMessage {
+          display: flex;
+          width: 688px;
+          height: 400px;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .emptyFieldMessage h3 {
+          font-family: 'Inter', sans-serif;
+          font-weight: 700;
+          font-size: 30px;
+      }
+
+      .emptyFieldMessage p {
+          font-family: 'Inter', sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+      }
+
+  }
+
+  @media screen and (min-width: 1024px) {
+
+    .mainContainer{
+        flex-direction: row;
+    }
+
+      textarea {
+          width: 700px;
+          height: 400px;
+      }
+
+      .actionBtns {
+          flex-direction: row;
+          justify-content: center;
+      }
+
+      .emptyFieldMessage {
+          display: flex;
+          width: 688px;
+          height: 400px;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .emptyFieldMessage h3 {
+          font-family: 'Inter', sans-serif;
+          font-weight: 700;
+          font-size: 30px;
+      }
+
+      .emptyFieldMessage p {
+          font-family: 'Inter', sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+      }
+
   }

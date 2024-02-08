@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./src/styles/homePage.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
 
     <title>Criptografador</title>
 </head>
@@ -16,13 +16,14 @@
             <header>
                 <img src="./src/images/alura-logo-A.png" alt="logo da alura com a letra 'a' em minúsculo">
             </header>
-            <div class="mainContainer">
-                <div class="textInputArea">
+            <main class="mainContainer">
+                <section class="textInputArea">
                     <div class="textBox">
                         <textarea name="textToTransform" class="texto" placeholder="Digite seu texto" cols="25"
-                            rows="10"></textarea>
+                            rows="8"></textarea>
                         <div class="ruleText">
-                            <img src="./src/images/bi_exclamation-circle-fill.png">&nbsp; Apenas letras minúsculas e sem
+                            <img class="ruleImg" src="./src/images/bi_exclamation-circle-fill.png">&nbsp; Apenas letras
+                            minúsculas e sem
                             acento.
                         </div>
                     </div>
@@ -34,30 +35,29 @@
                             Descriptografar
                         </button>
                     </div>
-                </div>
-                <div class="magicArea">
+                </section>
+                <section class="magicArea">
                     <div class="emptyFieldMessage">
                         <h3>Nenhuma mensagem encontrada</h3>
                         <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                     </div>
                     <div class="encryptedArea">
-                        <textarea name="encryptedText" class="EncryptedText" cols="25" rows="10"></textarea>
+                        <textarea name="encryptedText" class="EncryptedText" cols="25" rows="8"></textarea>
+                    </div>
+                    <div class="uncryptedArea">
+                        <textarea name="uncryptedText" class="UncryptedText" cols="25" rows="8"></textarea>
                     </div>
 
-                    <div class="uncryptedArea">
-                        <textarea name="uncryptedText" class="UncryptedText" cols="25" rows="10"></textarea>
-                    </div>
                     <div class="actionBtns">
                         <button class="copyBtnEncrypt copyBtn" onclick="writeToClipboardEncrypt()">
                             Copiar
                         </button>
-
                         <button class="copyBtnUncrypt copyBtn" onclick="writeToClipboardUncrypt()">
                             Copiar
                         </button>
                     </div>
-                </div>
-            </div>
+                </section>
+            </main>
             <footer>
                 &copy; Feito com &hearts; por Guilherme Tomesz Flores
             </footer>
