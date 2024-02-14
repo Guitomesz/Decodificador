@@ -60,6 +60,7 @@
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 24px;
+      width: 343px;
   }
 
   textarea::placeholder {
@@ -134,7 +135,7 @@
       width: 327px;
       height: 186px;
       border-radius: 32px;
-      box-shadow: 0 10px 10px 25px rgba(128, 128, 128, 0.4);
+      box-shadow: 0 10px 10px 25px rgba(128, 128, 128, 0.250);
   }
 
   .emptyFieldMessage h3 {
@@ -148,23 +149,22 @@
   }
 
   @keyframes pulsarAviso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-      0% {
-          transform: scale(1);
-      }
+.pulsarAviso {
+    animation: pulsarAviso 1.5s ease-in-out 0s 2 alternate; /* Duração de 1.5s, sem atraso, 2 repetições alternadas */
+}
 
-      50% {
-          transform: scale(0.9);
-      }
 
-      100% {
-          transform: scale(1);
-      }
-  }
-
-  .pulsarAviso {
-      animation: pulsarAviso 2s infinite;
-  }
 
   footer {
       grid-area: rodape;
@@ -183,11 +183,12 @@
   @media screen and (min-width: 768px) {
 
       .backgroundContainer {
-          min-width: 100%;
+          width: 768px;
+          height: 1174px;
       }
 
       textarea {
-          width: 700px;
+          width: 688px;
           height: 400px;
       }
 
@@ -220,9 +221,9 @@
 
   @media screen and (min-width: 1024px) {
 
-    .mainContainer{
-        flex-direction: row;
-    }
+      .mainContainer {
+          flex-direction: row;
+      }
 
       textarea {
           width: 700px;
