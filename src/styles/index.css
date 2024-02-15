@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+img {
+    -webkit-user-drag: none;
+}
+
 :root {
     --color-lightgray: #F3F5FC;
     --color-darkblue: #0A3871;
@@ -89,6 +93,7 @@ textarea:focus::placeholder {
     height: 67px;
     border-radius: 24px;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .cryUncry {
@@ -266,7 +271,7 @@ footer {
     }
 
     .copyBtn {
-        margin-top: 27.2px;
+        margin-top: 1.7em;
     }
 
     .desktopImage {
