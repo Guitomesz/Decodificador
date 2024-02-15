@@ -17,3 +17,5 @@ Regras de exceção:
 São aceitas apenas letras minúsculas e sem acentuação.
 
 Divirtam-se!
+
+#challengeonedecodificador5
